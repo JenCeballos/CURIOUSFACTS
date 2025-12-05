@@ -1,0 +1,149 @@
+body {
+    font-family: 'Irish Grover', cursive;
+    background: linear-gradient(135deg, #ffe6fc, #e5d9ff, #d4f2ff);
+    background-attachment: fixed;
+    color: #4b076b;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #b300d6;
+    text-shadow: 2px 2px #ffffff;
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#fact-section {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#fact-text {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: 'Irish Grover', cursive;
+    font-size: 1.2rem;
+    padding: 12px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+
+    background: linear-gradient(to bottom right, #ffb3f0, #ffccff);
+    color: #5a006a;
+
+    box-shadow: 0 4px 12px rgba(255, 0, 200, 0.3);
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.12);
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px #ff79f9;
+}
+
+#btn-save-favorite {
+    background: linear-gradient(to bottom right, #a7c7ff, #d8e7ff);
+    color: #003070;
+    box-shadow: 0 4px 12px rgba(0, 110, 255, 0.3);
+}
+
+#btn-save-favorite:hover {
+    box-shadow: 0 0 15px #7ab5ff;
+}
+
+#favorites-section {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+    width: 260px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+#favorites-section h2 {
+    text-align: center;
+    color: #b300d6;
+}
+
+#favorites-list {
+    list-style: none;
+    padding: 0;
+}
+
+#favorites-list li {
+    background: #ffd9fb;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.15s;
+}
+
+#favorites-list li:hover {
+    transform: scale(1.05);
+}
+
+.stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: floatStar 8s linear infinite;
+    filter: blur(1px);
+}
+
+@keyframes floatStar {
+    from {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0.9;
+    }
+    to {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+h1 {
+    background: linear-gradient(90deg, 
+        #ff00ff, #ff77ff, #ffd6ff, #ffffff, #ff77ff, #ff00ff
+    );
+    background-size: 400%;
+    color: transparent;
+    animation: glitterMove 5s linear infinite;
+}
+
+@keyframes glitterMove {
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+}
